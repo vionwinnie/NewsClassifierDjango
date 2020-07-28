@@ -7,7 +7,6 @@
  - Deployment: GCP App Engine
 
 ## Roadmap:
- - Fix "Your Name:" for enter_text.html
  - Add CSS for all templates
  - Deploy using GCP App Engine
 
