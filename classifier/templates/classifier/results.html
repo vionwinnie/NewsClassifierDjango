@@ -1,0 +1,7 @@
+<h1>Title:{{ news.news_text }}</h1>
+
+<ul> Category Prediction: <br><br>
+{% for category in news.category_set.all %}
+<li>{{ category.category }} : {{category.prob_score}}</li>
+{% endfor %}
+</ul>

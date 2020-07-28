@@ -1,0 +1,24 @@
+Sources:
+- https://docs.djangoproject.com/en/3.0/intro/tutorial04/
+- Django Forms: https://docs.djangoproject.com/en/3.0/topics/forms/
+
+
+`python manage.py makemigrations classifier`
+-- Telling django that I am making changes in models
+
+`python manage.py sqlmigrate polls 0001`
+-- Return SQL commands that initialize the schema
+
+`python manage.py migrate`
+-- to create those model tables in your database:
+
+Explanation on Views:
+- In our classifier  application, we’ll have the following four views:
+
+Classifier “index” page – displays the latest few questions.
+Classifier “detail” page – allow to enter news text
+Classifier “results” page – displays results for a particular question.
+Categorize  action – handles category prediction for a news
+
+In Django, web pages and other content are delivered by views. Each view is represented by a Python function (or method, in the case of class-based views). Django will choose a view by examining the URL that’s requested (to be precise, the part of the URL after the domain name).
+
