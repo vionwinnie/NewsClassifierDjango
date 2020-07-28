@@ -41,7 +41,7 @@ def enter_text(request):
             # process the data in form.cleaned_data as required
             # ...
             # redirect to a new URL:
-            main_text = form.cleaned_data['your_name']
+            main_text = form.cleaned_data['enter_text']
 
             # Predict Model
             pred_category,pred_score = predict.predict(main_text)
