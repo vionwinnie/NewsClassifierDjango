@@ -13,6 +13,5 @@
 
 
 ## To Start the application:
- - Remote to Newsapp directory
  - `python manage.py runserver`
 
