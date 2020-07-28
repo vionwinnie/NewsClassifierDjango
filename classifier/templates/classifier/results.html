@@ -10,7 +10,7 @@
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style type="text/css">
     	body {
-    		background-color: lightpink;
+    		background-color: #FFE4E1;
     	}
     	h3 {
     		font-family: Ariel;
@@ -52,9 +52,9 @@
 
 {% for category in news.category_set.all %}
 
-<p id = "Cat"> Category <i class="material-icons">keyboard_tab</i> <span>_____</span><h3>{{ category.category }}</h3>  </p><br>
+<p id = "Cat"> Category <i class="material-icons">drag_handle</i> <span>_____</span><h3>{{ category.category }}</h3>  </p><br>
 
-<p><i>Probability score <i class="material-icons">insert_chart</i></i> {{category.prob_score}}</p>
+<p><i>Probability score :  {{category.prob_score}}</p>
 
 {% endfor %}
 
