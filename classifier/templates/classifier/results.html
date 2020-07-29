@@ -1,7 +1,64 @@
-<h1>Title:{{ news.news_text }}</h1>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>News Predictor</title>
+	 <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-<ul> Category Prediction: <br><br>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style type="text/css">
+    	body {
+    		background-color: plum;
+    	}
+    	h3 {
+    		font-family: Ariel;
+    		color: red;
+    		display: inline;
+    	}
+    	p {
+    		display: inline;
+    		font-size: 26px
+    	}
+    	#second-title {
+    		font-size: 52px;
+    		font-family: Ariel;
+    		text-decoration: underline;
+    	}
+    	#main-text{
+
+    		color: darkgreen;
+    	}
+    	span {
+    		visibility: hidden;
+    	}
+    </style>
+</head>
+<body>
+
+
+<blockquote id = "main-text" class="flow-text">{{ news.news_text }}</blockquote>
+
+
+<div class="row">
+
+<div class="col s12">
+	<p class="flow-text" id="second-title">Category Prediction: <p>
+</div>
+
+<br>
+<br>
+
 {% for category in news.category_set.all %}
-<li>{{ category.category }} : {{category.prob_score}}</li>
+
+<p id = "Cat"> Category <i class="material-icons">drag_handle</i> <span>_____</span><h3>{{ category.category }}</h3>  </p><br>
+
+<p><i>Probability score :  {{category.prob_score}}</p>
+
 {% endfor %}
-</ul>
+
+
+</div>
+</body>
+</html>
