@@ -8,12 +8,13 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-            
+      
 	  <style type="text/css">
     	body {
     		background-color: #FFE4E1;
+    		border-style: solid;
+    		border-bottom-width: 13px;
     	}
-
     </style>
 </head>
 
@@ -25,7 +26,7 @@
    <div class="collection">
     {% for news in latest_question_list %}
 
-    <a style = "font-size: 10px" class="collection-item" href="{% url 'results' news.id %}"> • {{ news.news_text }} </a>
+    <a style = "font-size: 13px" class="collection-item" href="{% url 'results' news.id %}"> • {{ news.news_text }} </a>
 
     {% endfor %}
     </div>
