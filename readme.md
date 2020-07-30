@@ -7,7 +7,6 @@
  - Deployment: GCP App Engine
 
 ## Roadmap:
- - Add CSS for all templates
  - Deploy using GCP App Engine
 
 
