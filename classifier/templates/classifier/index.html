@@ -8,13 +8,16 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-      
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	  <style type="text/css">
     	body {
     		background-color: plum;
     		border-style: solid;
     		border-bottom-width: 13px;
     	}
+        #link {
+            color: black; 
+        }
     </style>
 </head>
 
@@ -34,7 +37,12 @@
 
     <p class="flow-text">No news articles are available yet.</p>
 
+
 {% endif %}
+
+
+<a id="link" href="{% url 'enter_text' %}"><i class="medium material-icons">add_circle_outline</i></a>
+
 
 </body>
 </html>
