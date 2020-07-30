@@ -7,7 +7,9 @@
  - Deployment: GCP App Engine
 
 ## Roadmap:
- - Deploy using GCP App Engine
+ - Add Food category
+ - Add Lime Explainer
+ - Migrate to Firebase db
 
 
 ## To Start the application:
