@@ -7,10 +7,13 @@
  - Deployment: GCP App Engine
 
 ## Roadmap:
- - Add Food category
  - Add Lime Explainer
  - Migrate to Firebase db
 
+## Create local testing environment
+ - `conda create -n newsApp_env python=3.7 pip`
+ - `conda activate newsApp_env`
+ - `pip install -r requirements.txt`
 
 ## To Start the application:
  - `python manage.py runserver`
