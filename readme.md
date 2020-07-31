@@ -18,3 +18,11 @@
 ## To Start the application:
  - `python manage.py runserver`
 
+## News Categories:
+ - Food
+ - Sport
+ - Politics
+ - Entertainment
+ - Tech
+ - Business
+
