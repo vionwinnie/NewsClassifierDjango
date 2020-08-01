@@ -89,17 +89,10 @@ if os.getenv('GAE_APPLICATION', None):
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-<<<<<<< HEAD:newsApp/settings.py
             'HOST': '/cloudsql/newsclassifier-284805:us-west1:polls-instance',
             'USER': 'user',
             'PASSWORD': '123456',
             'NAME': 'newsApp',
-=======
-            'HOST': '/cloudsql/<YOUR-SQL-INSTANCE-NAME>',
-            'USER': '<USER-NAME>',
-            'PASSWORD': '<PASSWORD>',
-            'NAME': '<DATABASE-NAME>',
->>>>>>> upstream/master:newsApp/settings_dummy.py
         }
     }
 else:
@@ -114,15 +107,9 @@ else:
             'ENGINE': 'django.db.backends.mysql',
             'HOST': '127.0.0.1',
             'PORT': '3306',
-<<<<<<< HEAD:newsApp/settings.py
             'NAME': 'newsApp',
             'USER': 'user',
             'PASSWORD': '123456',
-=======
-            'NAME': '<DATABASE-NAME>',
-            'USER': '<USER-NAME>',
-            'PASSWORD': '<PASSWORD>',
->>>>>>> upstream/master:newsApp/settings_dummy.py
         }
     }
 # [END db_setup]
@@ -180,8 +167,4 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 STATIC_ROOT = 'static'
-<<<<<<< HEAD:newsApp/settings.py
 STATIC_URL = '/static/'
-=======
-STATIC_URL = '/static/'
->>>>>>> upstream/master:newsApp/settings_dummy.py
