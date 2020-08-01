@@ -17,13 +17,17 @@
     		color: darkgreen;
     		font-size: 52px;
     	}
+        #text-box {
+            width: 700px;
+            height: 400px;
+        }
 
     </style>
 </head>
 
 <h1>Please copy and paste your news article  <i class="large material-icons">arrow_downward</i></h1>
 
-<form action="" method="post">
+<form id="text-box" action="" method="post">
     {% csrf_token %}
     
 
