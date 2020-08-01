@@ -44,7 +44,7 @@ def enter_text(request):
             main_text = form.cleaned_data['enter_text']
 
             # Predict Model
-            pred_category,pred_score,all_scores = predict.predict(main_text)
+            pred_category,pred_score,all_scores,viz = predict.predict(main_text)
             #pred_score = 0.5
             #pred_category = 'Sport'
 
