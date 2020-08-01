@@ -89,10 +89,10 @@ if os.getenv('GAE_APPLICATION', None):
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'HOST': '/cloudsql/<YOUR-SQL-INSTANCE-NAME>',
-            'USER': '<USER-NAME>',
-            'PASSWORD': '<PASSWORD>',
-            'NAME': '<DATABASE-NAME>',
+            'HOST': '/cloudsql/newsclassifier-284805:us-west1:polls-instance',
+            'USER': 'user',
+            'PASSWORD': '123456',
+            'NAME': 'newsApp',
         }
     }
 else:
@@ -107,9 +107,9 @@ else:
             'ENGINE': 'django.db.backends.mysql',
             'HOST': '127.0.0.1',
             'PORT': '3306',
-            'NAME': '<DATABASE-NAME>',
-            'USER': '<USER-NAME>',
-            'PASSWORD': '<PASSWORD>',
+            'NAME': 'newsApp',
+            'USER': 'user',
+            'PASSWORD': '123456',
         }
     }
 # [END db_setup]
