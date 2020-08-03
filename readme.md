@@ -1,8 +1,10 @@
 # Project Name: News Classifier Portal
-## Purpose: News Classification Model Serving with a UI for user input
+## Purpose: 
+ - Portal for user to enter news article and show news category classification
+ - Using local surrogate model to display which words in the text triggers such prediction using LIME algorithm
 ## Tech Stack:
  - Language: Python 3.7
- - Web Application Framework: Django ('pip install django')
+ - Web Application Framework: Django
  - Database: sqlite
  - Deployment: GCP App Engine
 
