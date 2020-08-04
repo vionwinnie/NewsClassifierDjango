@@ -23,7 +23,7 @@ def predict(text):
     category_names = ['sport','business','tech','entertainment','politics','food']
 
     ## Recovering vectorizer and model
-    model_path = './classifier/serving/model/model.joblib'
+    model_path = './classifier/serving/model/model_v2.joblib'
     model = joblib.load(model_path)
     
     ## Predict Category and Probability Score
