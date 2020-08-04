@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	  <style type="text/css">
     	body {
+            display: inline-flex;
+            flex-direction: column;
     		background-color: plum;
     		border-style: solid;
     		border-bottom-width: 13px;
@@ -18,6 +20,7 @@
         #link {
             color: black; 
         }
+       
     </style>
 </head>
 
@@ -27,10 +30,13 @@
  
     	<h2>Here are most recent predicted News :<h2>
    <div class="collection">
+    {% for category in news.category_set.all %}
+        <p>{{ category.category }}</p>
+    {% endfor %}
     {% for news in latest_question_list %}
-
-    <a style = "font-size: 13px" class="collection-item" href="{% url 'results' news.id %}"> • {{ news.news_text }} </a>
-
+    
+    <a style = "font-size: 13px" class="collection-item" href="{% url 'results' news.id %}">• {{ news.news_text }} </a>
+ 
     {% endfor %}
     </div>
 {% else %}
