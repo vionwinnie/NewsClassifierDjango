@@ -25,19 +25,22 @@
 </head>
 
 <body>
-
 {% if latest_question_list %}
- 
+
     	<h2>Here are most recent predicted News :<h2>
+  
    <div class="collection">
-    {% for category in news.category_set.all %}
-        <p>{{ category.category }}</p>
-    {% endfor %}
+{% for category in  latest_category_list %}
+
+
     {% for news in latest_question_list %}
     
+    {{category.category}}
     <a style = "font-size: 13px" class="collection-item" href="{% url 'results' news.id %}">• {{ news.news_text }} </a>
  
     {% endfor %}
+
+  {% endfor %}  
     </div>
 {% else %}
 

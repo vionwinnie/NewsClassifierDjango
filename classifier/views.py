@@ -11,11 +11,12 @@ from .serving import predict
 # Create your views here.
 def index(request):
     latest_news_list = News.objects.order_by('-pub_date')[:5]
-    # category = Category.objects.order_by('-category')[:5]
+    category = Category.objects.order_by('-category')[:5]
     ## Reading from template subdirectories 
     #template = loader.get_template('classifier/index.html')
     context = {
-            'latest_question_list':latest_news_list
+            'latest_question_list':latest_news_list,
+            'latest_category_list':category
             }
     ## Create the http based on the response
     #return HttpResponse(template.render(context,request))
