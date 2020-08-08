@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	  <style type="text/css">
     	body {
+            display: inline-flex;
+            flex-direction: column;
     		background-color: plum;
     		border-style: solid;
     		border-bottom-width: 13px;
@@ -18,25 +20,35 @@
         #link {
             color: black; 
         }
+       
     </style>
 </head>
 
 <body>
+{% if news_category_list %}
 
-{% if latest_question_list %}
- 
-    	<h2>Here are most recent predicted News :<h2>
+        <h2>Here are most recent predicted News :<h2>
+  
    <div class="collection">
-    {% for news in latest_question_list %}
+{% for category in  all_category %}
 
-    <a style = "font-size: 13px" class="collection-item" href="{% url 'results' news.id %}"> • {{ news.news_text }} </a>
+
+    {{category}}
+
+    
+    {% for item in news_category_list %}
+ 
+    {% if item.1.category == category %}
+
+    <a style = "font-size: 13px" class="collection-item" href="{% url 'results' item.0.id %}">• {{ item.0.news_text }} </a>
+
+    {% endif %}
 
     {% endfor %}
+
+  {% endfor %}  
     </div>
 {% else %}
-
-    <p class="flow-text">No news articles are available yet.</p>
-
 
 {% endif %}
 
