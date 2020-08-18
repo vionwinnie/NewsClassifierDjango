@@ -62,7 +62,7 @@ def enter_text(request):
 
             # Save Predict Category to Sqlite
             pred_category = Category(category=pred_category,
-                    prob_score=pred_score,news_id=q_id)
+                    prob_score=pred_score,news_id=q_id, viz=viz)
             pred_category.save()
             return HttpResponseRedirect(reverse('results', args=(q.id,)))
 #            return HttpResponseRedirect('{}/results'.format(q_id))
