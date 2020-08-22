@@ -35,7 +35,8 @@ def predict(text):
     ## Create Lime Explanation HTML
     explainer = lime_text.LimeTextExplainer(class_names=category_names)
     explained = explainer.explain_instance(text,
-             model.predict_proba,top_labels=3, num_features=10)
+             model.predict_proba,top_labels=3, num_features=10) 
+
     viz = explained.as_html(text=False,predict_proba=True)
 
     return category_str,scores,score_pred,viz
