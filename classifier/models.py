@@ -5,7 +5,7 @@ from django.utils import timezone
 ## Think of model as object in OOP
 
 class News(models.Model):
-    news_text = models.CharField(max_length=1000)
+    news_text = models.TextField(blank=True)
     pub_date = models.DateTimeField('date published') 
     
 
@@ -21,7 +21,7 @@ class Category(models.Model):
     news = models.ForeignKey(News, on_delete=models.CASCADE)
     category = models.CharField(max_length=100)
     prob_score = models.FloatField(default=0)
-    viz = models.TextField(blank=False)
+    viz = models.TextField(blank=True)
 
 
     def __str__(self):
