@@ -92,7 +92,7 @@ if os.getenv('GAE_APPLICATION', None):
             'HOST': '/cloudsql/newsclassifier-284805:us-west1:polls-instance',
             'USER': 'user',
             'PASSWORD': '123456',
-            'NAME': 'dev',
+            'NAME': 'newsApp',
         }
     }
 else:
