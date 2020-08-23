@@ -49,11 +49,10 @@ def enter_text(request):
             # ...
             # redirect to a new URL:
             main_text = form.cleaned_data['enter_text']
+            info = (main_text[:1500] + '..') if len(main_text) > 1500 else main_text
 
             # Predict Model
-            pred_category,pred_score,all_scores,viz = predict.predict(main_text)
-            #pred_score = 0.5
-            #pred_category = 'Sport'
+            pred_category,pred_score,all_scores,viz = predict.predict(info)
 
             # Save News Data to Sqlite
             q = News(news_text=main_text, pub_date=timezone.now())
@@ -65,7 +64,6 @@ def enter_text(request):
                     prob_score=pred_score,news_id=q_id,viz=viz)
             pred_category.save()
             return HttpResponseRedirect(reverse('results', args=(q.id,)))
-#            return HttpResponseRedirect('{}/results'.format(q_id))
 
     # if a GET (or any other method) we'll create a blank form
     else:
